@@ -12,6 +12,21 @@ public class Order {
 
     private OrderStatus orderStatus;
 
+    // 정적 팩토리 메소드로 생성.
+    // 아래와 같이 동일한 시그니쳐를 사용하는 경우 생성 불가하다.(생성자의 시그니쳐가 중복되는 경우)
+    // 그때 정적 팩토리 메소스를 고려 해 볼수 있다.
+
+//    public Order (Product product, boolean prime) {
+//        this.product = product;
+//        this.prime = prime;
+//    }
+//
+//    public Order (Product product, boolean urgent) {
+//        this.product = product;
+//        this.prime = prime;
+//    }
+
+    // 고려된 정적 팩토리 메소드.
     public static Order primeOrder(Product product) {
         Order order = new Order();
         order.prime = true;
