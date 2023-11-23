@@ -7,6 +7,8 @@ import java.util.concurrent.*;
 public class ExecutorsExample {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
+        // int availiableCup = Runtime.getRuntime().availableProcessors(); // 사용가능한 cpu 개수 확인
+        // ExecutorService service = Executors.newFixedThreadPool(availiableCup); // cpu 갯수만큼의 threadpool  생성
         ExecutorService service = Executors.newFixedThreadPool(10);
 
         Future<String> submit = service.submit(new Task());

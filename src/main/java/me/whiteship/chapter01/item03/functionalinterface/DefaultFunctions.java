@@ -12,7 +12,10 @@ import java.util.function.Supplier;
 public class DefaultFunctions {
 
     public static void main(String[] args) {
-        Function<Integer, String> intToString = Object::toString;
+        Function<Integer, String> intToString = i -> i.toString(); //Object::toString;
+        String seo =  intToString.apply(22);
+
+        System.out.println("seo >>>>>>>>>>>>" + seo);
 
         Supplier<Person> personSupplier = Person::new;
         Function<LocalDate, Person> personFunction = Person::new;

@@ -17,6 +17,9 @@ public class ListQuiz {
 
         Comparator<Integer> desc = (o1, o2) -> o2 - o1;
 
+        // 인터페이스에 default 메소드 로 제공 하고 있다.
+        // 인터페이스에 default 메소스 생성시 참조
+        // dafult 메소드는 인스턴스(desc) 를 가지고 사용한다.
         numbers.sort(desc.reversed());
 
         System.out.println(numbers);

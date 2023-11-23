@@ -11,6 +11,8 @@ public class CleanerIsNotGood {
 
         List<Object> resourceToCleanUp = new ArrayList<>();
         BigObject bigObject = new BigObject(resourceToCleanUp);
+
+        // 어떤 자원이 gc 가 될때 이렇게 자원을 해제 하라고 지시한다.
         cleaner.register(bigObject, new BigObject.ResourceCleaner(resourceToCleanUp));
 
         bigObject = null;

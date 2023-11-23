@@ -19,6 +19,7 @@ public class HelloServiceFactory {
         HelloService helloService = new ChineseHelloService();
         System.out.println(helloService.hello());
 
+//       리플렉션(reflection ) 활용 예.
 //        Class<?> aClass = Class.forName("me.whiteship.hello.ChineseHelloService");
 //        Constructor<?> constructor = aClass.getConstructor();
 //        HelloService helloService = (HelloService) constructor.newInstance();
