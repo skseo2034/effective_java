@@ -12,8 +12,6 @@ public class Order {
 
     private OrderStatus orderStatus;
 
-
-    private Order() {}
     // 정적 팩토리 메소드로 생성.
     // 아래와 같이 동일한 시그니쳐를 사용하는 경우 생성 불가하다.(생성자의 시그니쳐가 중복되는 경우)
     // 그때 정적 팩토리 메소스를 고려 해 볼수 있다.
@@ -44,10 +42,6 @@ public class Order {
         return order;
     }
 
-    private static final Order ORDER = new Order();
-    public static Order getInstance() {
-        return ORDER;
-    }
     public static void main(String[] args) {
 
         // enum 비교시 equals 보다 == 사용을 권장한다.

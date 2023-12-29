@@ -9,10 +9,6 @@ public class Product {
         Settings settings1 = Settings.getInstance();
         Settings settings2 = Settings.getInstance();
 
-       // Order order = new Order();
-        Order order = Order.getInstance();
-        Order seo = Order.urgentOrder(new Product());
-
         System.out.println(settings1);
         System.out.println(settings2);
 
